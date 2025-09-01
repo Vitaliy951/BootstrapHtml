@@ -13,7 +13,7 @@ class EmbeddedCSSHandler(SimpleHTTPRequestHandler):
                 file_path = BASE_DIR / 'templates' / 'index.html'
 
                 if not file_path.exists():
-                    return self.send_error(404, "Файл index10.html не найден")
+                    return self.send_error(404, "Файл index.html не найден")
 
                 with open(file_path, 'rb') as f:
                     self.send_response(200)
